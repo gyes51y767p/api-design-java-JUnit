@@ -3,7 +3,6 @@ package api;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
-import java.util.Scanner;//need to create the user input
 
 
 
@@ -14,9 +13,8 @@ public class UserInputRegex {
     public UserInputRegex(String userInput) {
         this.userInput = Pattern.quote(userInput);//this will create the safe regex pattern
     }
-
     // Function to check if the regex pattern matches the beginning of the userString
-    public boolean matchesBeginning(String userString) {
+    public boolean matches(String userString) {
         try {
             // Create a Pattern object from the userInput (treated as a regex pattern)
             Pattern pattern = Pattern.compile(userInput);
@@ -24,10 +22,8 @@ public class UserInputRegex {
             // Create a Matcher object to match the pattern against the userString
             Matcher matcher = pattern.matcher(userString);
 
-            // Use matcher.find() to check if a match is found at the beginning of the userString
             return matcher.find();
-        } catch (PatternSyntaxException e) {
-            // Handle invalid regex pattern syntax
+        } catch (PatternSyntaxException e) {//need to fix this
             System.err.println("Invalid regex pattern syntax: " + e.getDescription());
             return false;
         }
@@ -43,6 +39,4 @@ public class UserInputRegex {
         this.userInput = Pattern.quote(userInput);
     }
 
-    // Other methods and logic for your UserInputRegex class
-    // ...
 }

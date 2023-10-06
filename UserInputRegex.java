@@ -4,6 +4,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import java.util.Scanner;
+import java.util.regex.PatternSyntaxException;
+
 
 
 
@@ -44,7 +46,8 @@ public class UserInputRegex implements AutoCloseable {
     public String getUserInputOfRegex() {
         return this.userInputToRegex;
     }
-    public String createYourRegexPattern() {
+    public static String createYourRegexPattern() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the string to start with (optional): ");
         String startWith = scanner.nextLine();
         System.out.println("Enter the string that is in the middle (optional): ");
@@ -73,6 +76,18 @@ public class UserInputRegex implements AutoCloseable {
         }
         return pattern.toString();
     }
+
+    public static boolean isRegexPatternValid(String pattern) {
+        try {
+            // Attempt to compile the provided regex pattern
+            Pattern.compile(pattern);
+            return true; // The pattern is valid
+        } catch (PatternSyntaxException e) {
+            // The pattern is invalid
+            return false;
+        }
+    }
+
 
     // Setter method to update the user input (treated as a regex pattern)
     public void setUserInput(String userInput) {

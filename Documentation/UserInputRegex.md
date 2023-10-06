@@ -10,27 +10,26 @@ The UserInputRegex class provides functionality to work with user input as a reg
 Description: Constructs a UserInputRegex object with the provided user input as orginal word.
 
 
-###Methods
+### Methods
 >##### justMatches(): Boolean
 
-Description: Checks if the orginal word (created from user input) matches the text in which user want to search
+Description: Checks if the orginal word (created from user input) matches the text in which user want to search<br>
 Returns: ture if find the orignal word in the text, vice versa.
 
 >##### getUserInput(): String
 
-Description: Retrieves the orginal word (user input).
-Returns:
-the orginal word
+Description: Retrieves the orginal word (user input).<br>
+Returns: the orginal word
 
 >##### setUserInput(String: newWord):  void
 
-Description: Updates the original word 
-Parameters: String
+Description: Updates the original word <br>
+Parameters: String<br>
 Return: void
 
 >##### createYourRegexPattern():  String
 
-Description: Allows the user to create complex regular expressions based on their input for starting, middle, and ending substrings without creating the object. It ensures thatregular expression pattern of user input is constructed correctly.   
+Description: Allows the user to create complex regular expressions based on their input for starting, middle, and ending substrings without creating the object. It ensures thatregular expression pattern of user input is constructed correctly.<br>
 
 Return: A String that is built accordinly by your preference
 
@@ -40,5 +39,5 @@ Return: A String that is built accordinly by your preference
 
 >##### isRegexPatternValid(String: pattern) : Boolean
 
-Description: Validating regex patterns before using them in your code to avoid runtime errors caused by invalid patterns. 
+Description: Validating regex patterns before using them in your code to avoid runtime errors caused by invalid patterns.<br> 
 Return: Boolean

@@ -5,19 +5,14 @@
 
 public class HelloWorld {
     public static void main(String[] args) {
-        
-        Boolean a= UserInputRegex.isRegexPatternValid("[a-zA-Z+");
-        System.out.println(a);
-        
+         try(UserInputRegex userInputRegex = new UserInputRegex()){ 
+         //userInputRegex.justMatches();
+        String originalinputRegex=userInputRegex.getUserInputOfRegex();
+        System.out.println(originalinputRegex);
 
-        //  try(UserInputRegex userInputRegex = new UserInputRegex()){ 
-        //  //userInputRegex.justMatches();
-        // String originalinputRegex=userInputRegex.getUserInputOfRegex();
-        // System.out.println(originalinputRegex);
-
-        //  String creatYourPattern=userInputRegex.createYourRegexPattern();
-        //  System.out.println(creatYourPattern);
-        //  }
+         String creatYourPattern=userInputRegex.createYourRegexPattern();
+         System.out.println(creatYourPattern);
+         }
 
     }
 }

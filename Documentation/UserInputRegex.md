@@ -1,7 +1,7 @@
 # Class: UserInputRegex
 
 ## Overview
-The UserInputRegex class provides functionality to work with user input as a regular expression pattern. It includes methods for returning the regex pattern from original word when creat the object, checking if the orginal word match the text. Moreover, you can creat a regex pattern by user choice.
+The UserInputRegex class provides functionality to work with user input as a regular expression pattern. It includes methods for returning the regex pattern from original word when creat the object, checking if the orginal word match the text. It supports user to trim the string and creat a regex pattern by user choice.
 
 ---
 
@@ -41,3 +41,13 @@ Return: A String that is built accordinly by your preference
 
 Description: Validating regex patterns before using them in your code to avoid runtime errors caused by invalid patterns.<br> 
 Return: Boolean
+
+
+>##### RemoveExtraSpaces(String input): String
+Description: Removing extra spaces and tabs from the input string,so the user can use it for create the right regex pattern <br>
+Return: String
+
+
+>##### removeSpecialCharacters(String input): String
+Description: removing special characters from the input string after resulting False by using `isRegexPatternValid(String: pattern)`, then the String can be used to crerate your own right regx pattern<br> 
+Return: String

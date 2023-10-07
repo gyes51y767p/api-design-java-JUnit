@@ -6,7 +6,9 @@
 public class HelloWorld {
     public static void main(String[] args) {
         
-        Boolean a= UserInputRegex.isRegexPatternValid("[a-zA-Z+");
+        String a= UserInputRegex.removeSpecialCharacters( "Hello,        \\t\\n" + //
+                "\\s!@ W\\n" + //
+                "orld! Th@#is is a tes$%^&)(\\t string 123." );
         System.out.println(a);
         
 

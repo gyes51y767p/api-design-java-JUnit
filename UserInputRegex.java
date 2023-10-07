@@ -87,7 +87,25 @@ public class UserInputRegex implements AutoCloseable {
             return false;
         }
     }
+    public static String RemoveExtraSpaces(String input) {
+            if (input != null && !input.isEmpty()) {
+            // Remove extra spaces and tabs using regular expression
+            String cleanedString = input.replaceAll("\\s+", " ");
+            
+            // Print the cleaned string
+            return cleanedString;
+            }
+        return "Invalid input";
+    }
 
+    public static String removeSpecialCharacters(String input) {
+            if (input != null && !input.isEmpty()) {
+            String cleanedString = input.replaceAll("[^a-zA-Z0-9\\s]+", "").replaceAll("\\s+", " ");
+                return cleanedString;
+            }
+        return "Invalid input";
+    }
+    
 
     // Setter method to update the user input (treated as a regex pattern)
     public void setUserInput(String userInput) {

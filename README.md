@@ -2,7 +2,7 @@
  Regex Expression is a powerful tool for pattern matching and text manipulation. It allows you to define a pattern, which is a sequence of characters, and then search for, match, or manipulate text based on that pattern. Regex could be very complicated, confused for beginners. `EasyRegex` helps to create and verify the regex pattern.
 
 # Keywords
-regex pattern, regex expreession, genereate regax, remove extra space, test regex
+regex pattern, regex expression, generate regax, remove extra space, test regex
 
 ## Table of contents
 1. [Getting Started](#Getting-Started)
@@ -12,7 +12,7 @@ regex pattern, regex expreession, genereate regax, remove extra space, test rege
 
 # Getting Started <a name="Getting-Started"></a>
 
-To pull all the file run:
+To clone the repository, run the following command:
 
 ```bash
 git clone https://github.com/comp-229/api-design-2023-jingwen-punam-shenghao.git

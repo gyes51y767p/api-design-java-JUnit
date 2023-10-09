@@ -55,7 +55,7 @@ The usage sample demonstrates how to apply the API for different matching scenar
     - `inputString`: Type `String` - The input string to match against.
 - Returns: Type `boolean` - `true` if the input string matches the complete regular expression, `false` otherwise.
 
-#### `matchAny(String inputString)`
+#### `matchAnyIndex(String inputString)`
 
 - Parameters:
     - `inputString`: Type `String` - The input string to match against.
@@ -89,7 +89,7 @@ The usage sample demonstrates how to apply the API for different matching scenar
 
 These methods are used internally for regex pattern generation.
 
-#### `generateRegexExpressionString()`
+#### `generateRegexPattern()`
 
 - Description: Generates the raw regular pattern string based on the set patterns.
 

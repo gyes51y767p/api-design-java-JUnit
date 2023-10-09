@@ -45,10 +45,10 @@ public class EasyRegex {
     }
 
     public void printCurrentRegex() {
-        System.out.println(generateRegexExpressionString());
+        System.out.println(generateRegexPattern());
     }
 
-    private String generateRegexExpressionString() {//change name to generateRegexPattern
+    private String generateRegexPattern() {//change name to generateRegexPattern
         StringBuilder sb = new StringBuilder();
         //replace line 58-60
         // if (startWithStr != null && !startWithStr.isEmpty()) {
@@ -117,7 +117,7 @@ public class EasyRegex {
         }
     }
 
-    public List<Integer> matchAny(String inputString) {//could we change the name to mathAny name to matchAnyIndex
+    public List<Integer> matchAnyIndex(String inputString) {
         try {
             Pattern pattern = generateRegexPatternForAny();
             List<Integer> matchedIndex = new ArrayList<>();

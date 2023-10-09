@@ -64,7 +64,7 @@ public class ApiUsageSample {
 
     private static void showMatchResults(EasyRegex easyRegex, String inputText) {
         System.out.println("Match All result:" + easyRegex.matchAll(inputText));
-        System.out.println("Match Any" + easyRegex.matchAny(inputText));
+        System.out.println("Match Any" + easyRegex.matchAnyIndex(inputText));
         System.out.println("Match Any Raw" + easyRegex.matchAnyRaw(inputText));
     }
     private static void demoRegexisValid() {

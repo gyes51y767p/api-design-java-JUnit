@@ -3,7 +3,7 @@
 ## Introduction
 
 This documentation provides an overview of the EasyRegex API (`EasyRegex`) and a separate section on using the API with a sample code (`ApiUsageSample`).  
-The `EasyRegex` package provides a simple Java API for working with regular expressions in a user-friendly manner. It allows you to easily generate and use regular expressions with specified start, any, and end patterns.
+The `EasyRegex` package provides a simple Java API for working with regular expressions in a user-friendly manner. It allows you to easily generate and use regular expressions with specified start, any, and end patterns. Moreover users can test the regex patter they created is valid or not in order to be used further.
 The usage sample demonstrates how to apply the API for different matching scenarios.
 
 ## Class: EasyRegex
@@ -67,13 +67,31 @@ The usage sample demonstrates how to apply the API for different matching scenar
     - `inputString`: Type `String` - The input string to match against.
 - Returns: Type `List<Integer>` - A list of indices where any pattern matches within the input string without quoting (for the situation where the input is an regular expression) .
 
+#### `isRegexPatternValid(String inputRegex)`
+
+- Parameters:
+    - `inputRegex`: Type `String` - The input regex pattern to test valid or not.
+- Returns: Type `boolean` - Validating regex patterns before using them in your code to avoid runtime errors caused by invalid patterns.
+
+#### `removeExtraSpaces(String inputString)`
+
+- Parameters:
+    - `inputString`: Type `String` - The input string for removing space.
+- Returns: Type `String` - Removing extra spaces and tabs from the input string that user can use it for create the right regex pattern.
+
+#### `removeSpecialCharacters(String inputString)`
+
+- Parameters:
+    - `inputString`: Type `String` - The input string for removing specail caharacters.
+- Returns: Type `String` - removing special characters from the input string after resulting False by using `isRegexPatternValid(String: pattern)` that the String can be used to crerate your own right regx pattern
+
 ### Internal Methods
 
 These methods are used internally for regex pattern generation.
 
 #### `generateRegexExpressionString()`
 
-- Description: Generates the raw regular expression string based on the set patterns.
+- Description: Generates the raw regular pattern string based on the set patterns.
 
 #### `generateRegexPatternRaw()`
 

@@ -48,16 +48,35 @@ public class EasyRegex {
         System.out.println(generateRegexExpressionString());
     }
 
-    private String generateRegexExpressionString() {
+    private String generateRegexExpressionString() {//change name to generateRegexPattern
         StringBuilder sb = new StringBuilder();
+        //replace line 58-60
+        // if (startWithStr != null && !startWithStr.isEmpty()) {
+        //     sb.append("^"); // Anchor to the start of the string
+        //     sb.append(Pattern.quote(startWithStr));
+        // }
         if(!startWithStr.isEmpty()) {
             sb.append("^").append(startWithStr);
         }
+        //replace line 67-71
+        // if (anyStr != null && !anyStr.isEmpty()) {
+        //     sb.append(".*"); // Anchor to the start of the string
+        //     sb.append(Pattern.quote(anyStr));
+        //     sb.append(".*");
+        //   }
         if(!anyStr.isEmpty()) {
             sb.append(".*").append(anyStr).append(".*");
         } else {
             sb.append(".*");
         }
+        //replace 80 -83
+        // if (endWithStr != null && !endWithStr.isEmpty()) {
+        //     if (anyStr == null || anyStr.isEmpty()) {
+        //         sb.append(".*"); // Anchor to the start of the string
+        //     }
+        //     sb.append(Pattern.quote(endWithStr)); // Quote the input to escape special characters
+        //     sb.append("$"); // Anchor to the end of the string
+        // }
         if(!endWithStr.isEmpty()) {
             sb.append(endWithStr).append("$");
         }
@@ -98,7 +117,7 @@ public class EasyRegex {
         }
     }
 
-    public List<Integer> matchAny(String inputString) {
+    public List<Integer> matchAny(String inputString) {//could we change the name to mathAny name to matchAnyIndex
         try {
             Pattern pattern = generateRegexPatternForAny();
             List<Integer> matchedIndex = new ArrayList<>();
@@ -126,6 +145,30 @@ public class EasyRegex {
             System.out.println("There are errors with your regex, please try again: " + e.getMessage());
             return Collections.emptyList();
         }
+    }
+    public static boolean isRegexPatternValid(String pattern) {
+        try {
+            Pattern.compile(pattern);
+            return true; // The pattern is valid
+        } catch (PatternSyntaxException e) {
+            return false;
+        }
+    }
+    public static String removeExtraSpaces(String input) {
+        if (input != null && !input.isEmpty()) {
+        // Remove extra spaces and tabs using regular expression
+        String cleanedString = input.replaceAll("\\s+", " ");
+        // Print the cleaned string
+        return cleanedString;
+        }
+    return "Invalid input";
+    }
+    public static String removeSpecialCharacters(String input) {
+        if (input != null && !input.isEmpty()) {
+        String cleanedString = input.replaceAll("[^a-zA-Z0-9\\s]+", "").replaceAll("\\s+", " ");
+            return cleanedString;
+        }
+    return "Invalid input";
     }
 
 }

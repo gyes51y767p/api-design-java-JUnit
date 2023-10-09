@@ -17,6 +17,9 @@ public class ApiUsageSample {
         demoAnyString();
         demoLiteralString();
         demoRawString();
+        demoRegexisValid();
+        demoTrimSpace();
+        demoTrimSpecialChar();
     }
 
     private static void demoStartWith() {
@@ -63,5 +66,20 @@ public class ApiUsageSample {
         System.out.println("Match All result:" + easyRegex.matchAll(inputText));
         System.out.println("Match Any" + easyRegex.matchAny(inputText));
         System.out.println("Match Any Raw" + easyRegex.matchAnyRaw(inputText));
+    }
+    private static void demoRegexisValid() {
+        EasyRegex easyRegex = new EasyRegex();
+        String inputText = "[^good+";
+        System.out.println("the regex patter you provided is: "+ easyRegex.isRegexPatternValid(inputText));
+    }
+    private static void demoTrimSpace() {
+        EasyRegex easyRegex = new EasyRegex();
+        String inputText = "   hello     !! how     are    you     ??    ";
+        System.out.println("After trim space: "+ easyRegex.removeExtraSpaces(inputText));
+    }
+    private static void demoTrimSpecialChar() {
+        EasyRegex easyRegex = new EasyRegex();
+        String inputText = "   he$ /*   llo     !! how  \t   a  re    yo\nu     ??    ";
+        System.out.println("After trim special char: "+ easyRegex.removeSpecialCharacters(inputText));
     }
 }

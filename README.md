@@ -22,7 +22,8 @@ git clone https://github.com/comp-229/api-design-2023-jingwen-punam-shenghao.git
 Using the API with a sample code
 
 # [EasyRegex] <a name="EasyRegex"></a>
-The `EasyRegex` package provides a simple Java API for working with regular expressions in a user-friendly manner.
+The `EasyRegex` [Documentation](Documentation/docs.md)
+package provides a simple Java API for working with regular expressions in a user-friendly manner.
 
 # Contributing <a name="Contributing"></a>
 Chunjingwen Cui, Sheng Hao Liang, Punam Ram Pukale

@@ -6,7 +6,7 @@ regex pattern, regex expression, generate regax, remove extra space, test regex
 
 ## Table of contents
 1. [Getting Started](#Getting-Started)
-1. [Usage Sample](#Usage-Sample)
+2. [Usage Sample](#Usage-Sample)
 3. [EasyRegex](#EasyRegex)
 4. [Contributing](#Contributing)
 

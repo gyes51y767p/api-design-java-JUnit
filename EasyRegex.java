@@ -48,7 +48,7 @@ public class EasyRegex {
         System.out.println(generateRegexPattern());
     }
 
-    private String generateRegexPattern() {//change name to generateRegexPattern
+    private String generateRegexPattern() {
         StringBuilder sb = new StringBuilder();
         //replace line 58-60
         // if (startWithStr != null && !startWithStr.isEmpty()) {

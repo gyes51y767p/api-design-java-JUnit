@@ -19,7 +19,7 @@ git clone https://github.com/comp-229/api-design-2023-jingwen-punam-shenghao.git
 ```
 
 # [Usage Sample] <a name="Usage-Sample"></a>
-Using the API with a sample code
+Using the API with a sample code [Sample](ApiUsageSample.java)
 
 # [EasyRegex] <a name="EasyRegex"></a>
 The `EasyRegex` [Documentation](Documentation/docs.md)

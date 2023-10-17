@@ -1,4 +1,4 @@
-package api;
+//package api;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -147,23 +147,25 @@ public class EasyRegex {
         }
     }
 
-    public static boolean isRegexPatternValid(String pattern) {
+    public static boolean isRegexPatternValid(String pattern)throws InvalidPatternException {
         try {
             Pattern.compile(pattern);
             return true; // The pattern is valid
         } catch (PatternSyntaxException e) {
-            return false;
+            throw new InvalidPatternException("Invalid regex pattern: ");
         }
     }
 
-    public static String removeExtraSpaces(String input) {
-        if (input != null && !input.isEmpty()) {
-        // Remove extra spaces and tabs using regular expression
-        String cleanedString = input.replaceAll("\\s+", " ");
-        // Print the cleaned string
-        return cleanedString;
-        }
-    return "Invalid input";
+    
+
+    public static String removeExtraSpaces(String input) throws InvalidPatternException{
+            if (input != null && !input.isEmpty()) {
+                // Remove extra spaces and tabs using regular expression
+                String cleanedString = input.replaceAll("\\s+", " ").trim();
+                // Print the cleaned string
+                return cleanedString;
+            }
+            throw new InvalidPatternException("Invalid regex pattern: ");
     }
 
     public static String removeSpecialCharacters(String input) {

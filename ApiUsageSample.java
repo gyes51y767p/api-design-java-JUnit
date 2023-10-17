@@ -1,4 +1,4 @@
-package api;
+//package api;
 
 public class ApiUsageSample {
 
@@ -19,9 +19,9 @@ public class ApiUsageSample {
         demoAnyString();
         demoLiteralString();
         demoRawString();
-        demoRegexisValid();
-        demoTrimSpace();
-        demoTrimSpecialChar();
+       // demoRegexisValid();
+        //demoTrimSpace();
+        //demoTrimSpecialChar();
         demoSubstringWithPosition();
     }
 
@@ -71,23 +71,23 @@ public class ApiUsageSample {
         System.out.println("Match Any Raw" + easyRegex.matchAnyRaw(inputText));
     }
 
-    private static void demoRegexisValid() {
-        EasyRegex easyRegex = new EasyRegex();
-        String inputText = "[^good+";
-        System.out.println("the regex patter you provided is: "+ easyRegex.isRegexPatternValid(inputText));
-    }
+    // private static void demoRegexisValid() {
+    //     EasyRegex easyRegex = new EasyRegex();
+    //     String inputText = "[^good+";
+    //     System.out.println("the regex patter you provided is: "+ easyRegex.isRegexPatternValid(inputText));
+    // }
 
-    private static void demoTrimSpace() {
-        EasyRegex easyRegex = new EasyRegex();
-        String inputText = "   hello     !! how     are    you     ??    ";
-        System.out.println("After trim space: "+ easyRegex.removeExtraSpaces(inputText));
-    }
+    // private static void demoTrimSpace() {
+    //     EasyRegex easyRegex = new EasyRegex();
+    //     String inputText = "   hello     !! how     are    you     ??    ";
+    //     System.out.println("After trim space: "+ easyRegex.removeExtraSpaces(inputText));
+    // }
 
-    private static void demoTrimSpecialChar() {
-        EasyRegex easyRegex = new EasyRegex();
-        String inputText = "   he$ /*   llo     !! how  \t   a  re    yo\nu     ??    ";
-        System.out.println("After trim special char: "+ easyRegex.removeSpecialCharacters(inputText));
-    }
+    // private static void demoTrimSpecialChar() {
+    //     EasyRegex easyRegex = new EasyRegex();
+    //     String inputText = "   he$ /*   llo     !! how  \t   a  re    yo\nu     ??    ";
+    //     System.out.println("After trim special char: "+ easyRegex.removeSpecialCharacters(inputText));
+    // }
 
     private static void demoSubstringWithPosition() {
         EasyRegex easyRegex = new EasyRegex();

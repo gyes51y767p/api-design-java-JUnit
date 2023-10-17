@@ -146,6 +146,7 @@ public class EasyRegex {
             return Collections.emptyList();
         }
     }
+
     public static boolean isRegexPatternValid(String pattern) {
         try {
             Pattern.compile(pattern);
@@ -154,6 +155,7 @@ public class EasyRegex {
             return false;
         }
     }
+
     public static String removeExtraSpaces(String input) {
         if (input != null && !input.isEmpty()) {
         // Remove extra spaces and tabs using regular expression
@@ -163,12 +165,27 @@ public class EasyRegex {
         }
     return "Invalid input";
     }
+
     public static String removeSpecialCharacters(String input) {
         if (input != null && !input.isEmpty()) {
         String cleanedString = input.replaceAll("[^a-zA-Z0-9\\s]+", "").replaceAll("\\s+", " ");
             return cleanedString;
         }
     return "Invalid input";
+    }
+
+    public void matchSubstringWithPrintPosition(String inputString, String regexStr) {
+        try {
+            Pattern pattern = Pattern.compile(regexStr);
+            Matcher matcher = pattern.matcher(inputString);
+            while (matcher.find()) {
+                System.out.println("find() found substring \"" + matcher.group()
+                      + "\" starting at index " + matcher.start()
+                      + " and ending at index " + matcher.end());
+             }
+        } catch (PatternSyntaxException e) {
+            System.out.println("There are errors with your regex, please try again: " + e.getMessage());
+        }
     }
 
 }

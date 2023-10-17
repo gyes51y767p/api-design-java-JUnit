@@ -9,6 +9,8 @@ public class ApiUsageSample {
     private static String literalString = ".*";
 
     private static String rawString = "g(oog)+le";
+    private static String inputStr = "abc00123xyz456_0";
+    private static String regexStr = "[0-9]+";  
 
 
     public static void main(String[] args) {
@@ -20,6 +22,7 @@ public class ApiUsageSample {
         demoRegexisValid();
         demoTrimSpace();
         demoTrimSpecialChar();
+        demoSubstringWithPosition();
     }
 
     private static void demoStartWith() {
@@ -67,19 +70,29 @@ public class ApiUsageSample {
         System.out.println("Match Any" + easyRegex.matchAnyIndex(inputText));
         System.out.println("Match Any Raw" + easyRegex.matchAnyRaw(inputText));
     }
+
     private static void demoRegexisValid() {
         EasyRegex easyRegex = new EasyRegex();
         String inputText = "[^good+";
         System.out.println("the regex patter you provided is: "+ easyRegex.isRegexPatternValid(inputText));
     }
+
     private static void demoTrimSpace() {
         EasyRegex easyRegex = new EasyRegex();
         String inputText = "   hello     !! how     are    you     ??    ";
         System.out.println("After trim space: "+ easyRegex.removeExtraSpaces(inputText));
     }
+
     private static void demoTrimSpecialChar() {
         EasyRegex easyRegex = new EasyRegex();
         String inputText = "   he$ /*   llo     !! how  \t   a  re    yo\nu     ??    ";
         System.out.println("After trim special char: "+ easyRegex.removeSpecialCharacters(inputText));
     }
+
+    private static void demoSubstringWithPosition() {
+        EasyRegex easyRegex = new EasyRegex();
+        easyRegex.matchSubstringWithPrintPosition(inputStr, regexStr);
+    }
+
+
 }

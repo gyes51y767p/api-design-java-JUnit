@@ -82,8 +82,15 @@ The usage sample demonstrates how to apply the API for different matching scenar
 #### `removeSpecialCharacters(String inputString)`
 
 - Parameters:
-    - `inputString`: Type `String` - The input string for removing specail caharacters.
+    - `inputString`: Type `String` - The input string for removing special caharacters.
 - Returns: Type `String` - removing special characters from the input string after resulting False by using `isRegexPatternValid(String: pattern)` that the String can be used to crerate your own right regx pattern
+
+#### `matchSubstringWithPrintPosition(String inputString, String regexStr)`
+
+- Parameters:
+    - `inputString`: Type `String` - Input String for matching the regex pattern.
+    - `regexStr`: Type `String`- Regex to be matched.
+- Description: functionality involves string processing, and pattern matching using regular expressions, which take `inputString` and `regexStr`, and return a starting and ending position of the substring.additionally, error handling is implemented for invalid regex inputs. 
 
 ### Internal Methods
 

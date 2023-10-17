@@ -93,6 +93,6 @@ public class ApiUsageSample {
         EasyRegex easyRegex = new EasyRegex();
         easyRegex.matchSubstringWithPrintPosition(inputStr, regexStr);
     }
-
+    
 
 }

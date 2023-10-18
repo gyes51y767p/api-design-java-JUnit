@@ -7,7 +7,7 @@ regex pattern, regex expression, generate regax, remove extra space, test regex,
 ## Table of contents
 1. [Getting Started](#Getting-Started)
 2. [Usage Sample](#Usage-Sample)
-3. [engine.EasyRegex](#EasyRegex)
+3. [EasyRegex](#EasyRegex)
 4. [Contributing](#Contributing)
 5. [Unit test](#Unit Test)
 
@@ -22,8 +22,8 @@ git clone https://github.com/comp-229/api-design-2023-jingwen-punam-shenghao.git
 # [Usage Sample] <a name="Usage-Sample"></a>
 Using the API with a sample code [Sample](src/main/java/sample/ApiUsageSample.java)
 
-# [engine.EasyRegex] <a name="engine.EasyRegex"></a>
-The `engine.EasyRegex` [Documentation](Documentation/docs.md)
+# [EasyRegex] <a name="EasyRegex"></a>
+The `EasyRegex` [Documentation](Documentation/docs.md)
 package provides a simple Java API for working with regular expressions in a user-friendly manner.
 
 # Contributing <a name="Contributing"></a>

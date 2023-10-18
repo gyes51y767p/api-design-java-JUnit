@@ -1,5 +1,5 @@
-# engine.EasyRegex Introduction
- Regex Expression is a powerful tool for pattern matching and text manipulation. It allows you to define a pattern, which is a sequence of characters, and then search for, match, or manipulate text based on that pattern. Regex could be very complicated, confused for beginners. `engine.EasyRegex` helps to create and verify the regex pattern.
+# EasyRegex Introduction
+ Regex Expression is a powerful tool for pattern matching and text manipulation. It allows you to define a pattern, which is a sequence of characters, and then search for, match, or manipulate text based on that pattern. Regex could be very complicated, confused for beginners. `EasyRegex` helps to create and verify the regex pattern.
  Maven is the dependencies management tool for the project.
 # Keywords
 regex pattern, regex expression, generate regax, remove extra space, test regex, maven

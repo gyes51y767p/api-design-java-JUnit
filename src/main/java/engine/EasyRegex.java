@@ -1,4 +1,6 @@
-//package api;
+package engine;
+
+import exception.InvalidPatternException;
 
 import java.util.ArrayList;
 import java.util.Collections;

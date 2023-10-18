@@ -1,18 +1,18 @@
-# EasyRegex API Documentation
+# engine.EasyRegex API Documentation
 
 ## Introduction
 
-This documentation provides an overview of the EasyRegex API (`EasyRegex`) and a separate section on using the API with a sample code (`ApiUsageSample`).  
-The `EasyRegex` package provides a simple Java API for working with regular expressions in a user-friendly manner. It allows you to easily generate and use regular expressions with specified start, any, and end patterns. Moreover users can test the regex patter they created is valid or not in order to be used further.
+This documentation provides an overview of the engine.EasyRegex API (`engine.EasyRegex`) and a separate section on using the API with a sample code (`sample.ApiUsageSample`).  
+The `engine.EasyRegex` package provides a simple Java API for working with regular expressions in a user-friendly manner. It allows you to easily generate and use regular expressions with specified start, any, and end patterns. Moreover users can test the regex patter they created is valid or not in order to be used further.
 The usage sample demonstrates how to apply the API for different matching scenarios.
 
-## Class: EasyRegex
+## Class: engine.EasyRegex
 
 ### Constructors
 
-#### `EasyRegex()`
+#### `engine.EasyRegex()`
 
-- Initializes an `EasyRegex` object with empty start, any, and end patterns.
+- Initializes an `engine.EasyRegex` object with empty start, any, and end patterns.
 
 ### Properties
 
@@ -114,7 +114,7 @@ These methods are used internally for regex pattern generation.
 
 ## API Usage Sample
 
-This class demonstrates the usage of the EasyRegex API for creating and applying regular expressions in Java.
+This class demonstrates the usage of the engine.EasyRegex API for creating and applying regular expressions in Java.
 
 For each demo, the generated regular expression is printed, and the matching results for "Match All," "Match Any," and "Match Any Raw" are displayed.
 
@@ -122,10 +122,10 @@ Feel free to modify the patterns and input strings for further testing.
 
 ### Running the Sample
 
-Ensure you have the EasyRegex class available in your project, and then execute the `main` method in the ApiUsageSample class.
+Ensure you have the engine.EasyRegex class available in your project, and then execute the `main` method in the sample.ApiUsageSample class.
 
 ```java
-public class ApiUsageSample {
+public class sample.ApiUsageSample {
     public static void main(String[] args) {
         // ... (rest of the code)
     }

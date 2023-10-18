@@ -1,9 +1,10 @@
+package engine;
 
-import org.junit.*;
+import engine.EasyRegex;
+import exception.InvalidPatternException;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
-import java.util.regex.PatternSyntaxException;
-import org.junit.jupiter.api.function.Executable;
 
 
 public class testEasyRegex {
@@ -18,7 +19,7 @@ public class testEasyRegex {
     //it didnt thorw exception
     //@Test
     // public void testMatchAll_InvalidPattern() {
-    //     EasyRegex easyRegex = new EasyRegex();
+    //     engine.EasyRegex easyRegex = new engine.EasyRegex();
     //     easyRegex.setAnyStr("[a-z+"); // Invalid regular expression pattern
 
     //     // Use assertThrows to verify that PatternSyntaxException is thrown
@@ -49,7 +50,7 @@ public class testEasyRegex {
         assertEquals(2, indices.size());
         assertEquals(21, indices.get(0).intValue());
     }
-    //in order to get the thorw exception for testing, we need to change the code in EasyRegex.java
+    //in order to get the thorw exception for testing, we need to change the code in engine.EasyRegex.java
     @Test
     public void testIsRegexPatternValid_InvalidPattern() {
         String invalidPattern = "[a-z+"; // Invalid regular expression pattern
